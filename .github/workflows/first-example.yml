@@ -8,12 +8,19 @@ jobs:
         steps:
             - name: Checkou Repo
               uses: actions/checkout@v5
-              
-            - name: Welcome message
-              run: echo "My fisrt GiHub Actions Job"
 
-            - name: List files
-              run: ls
+            - name: List and Read file
+              run: |
+                echo "My fisrt GiHub Actions Job"
+                ls -lrta
+                cat README.md
 
-            - name: Read file
-              run: cat README.md
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a Dragon...RAWR" >> dragon.txt
+
+           
+           #   - name: List files
+              #   run: ls
+
+            #   - name: Read file
+            #     run: cat README.md
